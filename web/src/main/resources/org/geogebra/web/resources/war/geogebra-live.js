@@ -87,11 +87,11 @@
 
                         let commandString = that.api.getCommandString(label, false);
                         if (commandString) {
-                            that.sendEvent("evalCommand", label + " = " + commandString, label);
+                             that.sendEvent("evalCommand", label + " = " + commandString, label);
+                        } else {
+                            let xml = that.api.getXML(label);
+                            that.sendEvent("evalXML", xml, label);
                         }
-
-                        let xml = that.api.getXML(label);
-                        that.sendEvent("evalXML", xml, label);
                     }
 
                     updateCallback = null;
