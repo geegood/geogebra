@@ -255,7 +255,7 @@ public class EuclidianControllerW extends EuclidianController implements
 			// probably both are Okay not changing the toolbar to full Graphics
 			// view toolbar
 			((GuiManagerInterfaceW) app.getGuiManager())
-					.setActivePanelAndToolbar(App.VIEW_EUCLIDIAN);
+					.setActivePanelAndToolbar(getView().getEuclidianViewNo());
 		} else {
 			if (EuclidianConstants.isMoveOrSelectionMode(mode)
 					|| mode == EuclidianConstants.MODE_TRANSLATEVIEW
